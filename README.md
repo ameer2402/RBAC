@@ -119,6 +119,9 @@ When you enter the application, the Home Page is displayed, providing options to
 - 
   ![Screenshot 2024-11-24 095937](https://github.com/user-attachments/assets/de14a614-8e4f-4e91-b456-d92faf117ef1)
 
+  ![Screenshot 2024-11-24 124142](https://github.com/user-attachments/assets/0ea584ca-47af-4480-929d-ead84a932473)
+
+
 ## Authentication Flow
 - Users log in using their email and password.
 - A JWT token is generated and used for session management.
