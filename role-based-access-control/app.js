@@ -80,7 +80,6 @@ const PORT = process.env.PORT || 5000;
 // Making a connection to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI, {
-    dbName: process.env.DB_NAME,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
