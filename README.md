@@ -61,7 +61,7 @@ This application is a **Role-Based Access Control (RBAC)** system built using **
  **Create a .env file in the project root and add the following:**:  
 
     PORT=your_port
-    MONGODB_URI=mongodb://localhost:27017  //for local mongodb use can use mongodb cloud as well
+    MONGODB_URI=your_db-uri
     DB_NAME=your_database-name
     SESSION_SECRET=your_secret-key 
     JWT_SECRET=your_jwt-secret_key 
