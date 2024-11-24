@@ -4,8 +4,8 @@ const {validateToken}=require("./jwt");
         const cookieValue = req.cookies["token"];  // Corrected the way to access the cookie
         if (!cookieValue) {
             console.log("no token");
-            next();
-            
+            req.user = null;  // Ensure that user is set to null if no token is found
+            return next(); 
         }
     
         try {
@@ -17,6 +17,7 @@ const {validateToken}=require("./jwt");
             console.error('Token validation failed:', error);  // Optionally log the error
             // Clear invalid token (optional)
         res.clearCookie("token");
+        req.user = null;
         }
     
         next();  // Proceed to the next middleware
