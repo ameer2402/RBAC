@@ -11,13 +11,15 @@ const { roles } = require('./utils/constants');
 const admin=require('./routes/admin.route');
 const { cookieValidation } = require('./utils/authentication');
 const cookieParser = require("cookie-parser");
+const path=require("path");
 
 
 // Initialization
 const app = express();
 app.use(morgan('dev'));
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set("views", path.resolve(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
